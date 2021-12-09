@@ -15,6 +15,7 @@ public class Solution {
                 counter++;
             firstValue = secondValue;
         }
+        reader.close();
         System.out.print(counter);
     }
 }
