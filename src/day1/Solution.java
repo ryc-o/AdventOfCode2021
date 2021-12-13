@@ -11,7 +11,7 @@ public class Solution {
         int firstValue = Integer.parseInt(reader.readLine());
         while(reader.ready()){
             int secondValue = Integer.parseInt(reader.readLine());
-            if(secondValue > firstValue)
+            if(secondValue > firstValuea)
                 counter++;
             firstValue = secondValue;
         }
