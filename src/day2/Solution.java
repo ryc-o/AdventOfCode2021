@@ -7,7 +7,7 @@ import java.io.IOException;
 public class Solution {
     public static int depht = 0;
     public static int hPosition = 0;
-
+    public static int aim = 0;
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader("src/day2/input.txt"));
 
@@ -19,9 +19,12 @@ public class Solution {
 
     public static void checkPosition(String[] args){
         switch (args[0]) {
-            case ("forward") -> depht += Integer.parseInt(args[1]);
-            case ("down") -> hPosition += Integer.parseInt(args[1]);
-            case ("up") -> hPosition -= Integer.parseInt(args[1]);
+            case ("down") -> aim += Integer.parseInt(args[1]);
+            case ("up") -> aim -= Integer.parseInt(args[1]);
+            case ("forward") -> {
+                hPosition += Integer.parseInt(args[1]);
+                depht += aim * Integer.parseInt(args[1]);
+            }
         }
     }
 }
